@@ -1,0 +1,19 @@
+[
+    {
+      "title": "JS Array Functions - Map",
+      "post_detail": "Map(): method is used for creating a new array from an existing one ",
+      "user_id": 1
+    },
+    {
+      "title": "JS Array Functions - Filter",
+      "post_detail": "Filter(): method takes each element in an array and it applies a conditional statement against it. ",
+      "user_id": 2
+    },
+    {
+      "title": "JS Array Functions - Reduce",
+      "post_detail": "Reduce():method reduces an array of values down to just one value.",
+      "user_id": 3
+    }
+    
+  ]
+  
