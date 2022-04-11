@@ -14,14 +14,14 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const post of postData) {
+  for (const posts of postData) {
     await Post.create({
-      ...post,
+      ...posts,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
-  const comments = await Comments.bulkCreate(commentsData, {
+  const comment = await Comments.bulkCreate(commentsData, {
     returning: true,
   });
 

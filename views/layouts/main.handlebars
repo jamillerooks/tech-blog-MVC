@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog!</title>
+  <title>{{title}}</title>
   
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -14,10 +14,12 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
+        <span role="img" aria-label="app">📱</span>
         <a href="/">Tech Blog!</a>
       </h1>
+      <a class="nav-link active" aria-current="page" href="/">Home</a>
       <nav>
+        
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/dashboard">Dashboard</a> |

@@ -6,7 +6,7 @@
 	},
     {
 		"post_id": 2,
-		"comment_detail": "f this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array.",
+		"comment_detail": "If this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array.",
 		"user_id": 2
 	},
     {
