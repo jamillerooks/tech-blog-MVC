@@ -1,20 +1,5 @@
-    <h2>Welcome - {{name}}</h2>
-  <div class="row mt-2">
-  <div class="col-md-6">
-   <article class="card ">
-    <div class="card-header  ">
-      {{#if posts.length}}
-  <div class="card text-white  bg-primary ">
-    <h3>Current Posts:</h3>
-    {{#each posts as |post|}}
-    <p><a href="/post/{{post.id}}">{{post.title}}</a></p>
-    <p>{{post_detail}}</p>
-    
-  </div>    
-    {{/each}}
-    {{/if}}
-
-<div class="post card">
+    <h2 class ="text-center">Welcome - {{name}}</h2>
+    <div class="post card">
   <div class="card-header">
  <div class="col-md-4"></div>
  <div class="card text-white bg-primary post-list"></div>
@@ -29,26 +14,37 @@
 
     <button type="submit" class="btn btn-outline-primary">Submit</button>
   </form>
+</div> 
+
+  <div class="card text-white bg-primary post-list">
+  <div class="card-header flex-row justify-space-between "></div>
+  <div class="card-body">
 </div>
-
-<div class="card text-white bg-primary post-list">
-  <div class="card-header">
-    <h2>Edit Post</h2>
+<div class="posts">
+  {{#if posts.length}}
+    <div class="card text-white  bg-primary ">
+      <h3>Current Posts:
+        {{#each posts as |post|}}
+        <article class="card">
+          <div class="card text-white bg-primary post-list"></div>
+          <h2><a href="/post/{{post.id}}">{{post.title}}</a></h2>
+          <p>{{post_detail}}</p>
+         </h3>
+         </div>
+         <div class="card text-white bg-primary post-list">
+  
+           <div class="card-body">
+          {{body}}
+         </article>  
+      {{/each}}
+      {{/if}}
+    </div>
   </div>
-  <form id="edit-post-form" class="card-body">
-    <input type="hidden" id="post-id" value="{{post.id}}" />
 
-    <label class="form-label" for="post-title">Post Title</label>
-    <input type="text" id="post-title" value="{{post.title}}" class="form-input" />
+  
 
-    <label class="form-label" for="post-body">Post Detail</label>
-    <textarea id="post-detail" class="form-input">{{post.detail}}</textarea>
 
-    <button type="submit" class="btn btn-outline-warning">Update</button>
-
-    <button type="button" id="delete-btn" class="btn btn-outline-danger">Delete</button>
-  </form>
-  </div>
-</div>
 
 <script src="/js/dashboard.js"></script>
+
+ 
